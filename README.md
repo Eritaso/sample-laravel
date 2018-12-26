@@ -1,6 +1,6 @@
 # initial setting
 ```bash
-$ git clone https://github.com/Eritaso/BaseLaravel.git
+$ git clone https://github.com/Eritaso/sample-laravel.git
 $ cd sample-laravel
 $ git submodule init
 $ git submodule update
