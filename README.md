@@ -11,3 +11,9 @@ $ docker-compose exec workspace npm install
 $ docker-compose exec workspace php artisan key:generate
 ```
 http://localhost:7777/
+
+# laravel
+```bash
+$ git submodule init
+$ git submodule update
+```
