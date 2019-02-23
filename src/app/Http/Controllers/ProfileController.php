@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Show the application dashboard.

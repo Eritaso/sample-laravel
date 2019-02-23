@@ -13,6 +13,6 @@
 
 Auth::routes();
 
-Route::group(['middleware' => 'admin'], function () {
-    Route::get('/', 'Profile\HomeController@index')->name('profile');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', 'ProfileController@index');
 });
