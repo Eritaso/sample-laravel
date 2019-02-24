@@ -1,9 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Profile;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -18,5 +16,10 @@ class ProfileController extends Controller
         return view('profile.index', [
             'profiles' => Auth::user()->profiles()->get(),
         ]);
+    }
+
+    public function create()
+    {
+        return view('profile.create');
     }
 }

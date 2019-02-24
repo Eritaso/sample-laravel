@@ -10,24 +10,23 @@ class Profile extends Model
         'name', 'profession',
     ];
 
-
-    public function getProfessionAttribute()
+    public function getDipsProfessionAttribute()
     {
         switch ($this->profession) {
             case 0:
-                $text = '学生';
+                $profession = '学生';
                 break;
             case 1:
-                $text = '会社員';
+                $profession = '会社員';
                 break;
             case 2:
-                $text = 'フリーター';
+                $profession = 'フリーター';
         }
-        return $text;
+        return $profession;
     }
 
     public function profileSkills ()
     {
-        return $this->belongsToMany();
+        return $this->belongsToMany('App\Models\Skill', 'profiles_skills', 'profile_id', 'skill_id');
     }
 }

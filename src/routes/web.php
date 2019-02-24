@@ -15,4 +15,5 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'ProfileController@index');
+    Route::get('/profiles/create', 'ProfileController@create');
 });
